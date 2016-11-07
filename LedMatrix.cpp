@@ -164,3 +164,7 @@ void LedMatrix::setColumn(int column, byte value) {
 void LedMatrix::setPixel(byte x, byte y) {
     bitWrite(cols[x], y, true);
 }
+
+void LedMatrix::unsetPixel(byte x, byte y) {
+    bitWrite(cols[x], y, false);
+}
